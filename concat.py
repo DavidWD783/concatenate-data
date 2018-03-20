@@ -19,3 +19,4 @@ concat2 = pd.melt(frame = df, id_vars = ['country', 'year'], value_vars = ['m253
 
 concat = pd.concat([concat1, concat2], ignore_index = True)
 print(concat.head())
+print(concat.shape)
