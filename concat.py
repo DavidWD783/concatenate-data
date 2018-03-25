@@ -11,11 +11,11 @@ url = 'https://assets.datacamp.com/production/course_2023/datasets/tb.csv'
 urlretrieve(url, 'tb.csv')
 
 df = pd.read_csv(url, sep=',')
-# print(df.head())
+print(df.head())
 
 # Create two tables, then concatenate them from df
-concat1 = pd.melt(frame = df, id_vars = ['country', 'year'], value_vars = ['m014', 'm1524'], value_name = 'value')
-concat2 = pd.melt(frame = df, id_vars = ['country', 'year'], value_vars = ['m2534', 'm3544'], value_name = 'value')
+concat1 = pd.melt(frame = df, id_vars = ['country', 'year'], value_vars = ['f014', 'f1524'], value_name = 'value')
+concat2 = pd.melt(frame = df, id_vars = ['country', 'year'], value_vars = ['f2534', 'f3544'], value_name = 'value')
 
 concat = pd.concat([concat1, concat2], ignore_index = True)
 print(concat.head())
